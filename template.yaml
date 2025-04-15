@@ -6,21 +6,21 @@ Description: >
   Sample SAM Template for test-gbee
 
 Parameters:
-  NODE_ENV:
+  NodeEnv:
     Type: String
-  SERVER_PORT:
+  ServerPort:
     Type: String
-  SERVER_HOSTNAME:
+  ServerHostname:
     Type: String
-  DATABASE_URL:
+  DatabaseUrl:
     Type: String
-  JWT_SECRET:
+  JwtSecret:
     Type: String
-  DEFAULT_USER_NAME:
+  DefaultUserName:
     Type: String
-  DEFAULT_USER_EMAIL:
+  DefaultUserEmail:
     Type: String
-  DEFAULT_USER_PASSWORD:
+  DefaultUserPassword:
     Type: String
 
 Globals:
@@ -30,14 +30,14 @@ Globals:
       LogFormat: JSON
     Environment:
       Variables:
-        NODE_ENV: !Ref NODE_ENV
-        JWT_SECRET: !Ref JWT_SECRET
-        SERVER_PORT: !Ref SERVER_PORT
-        SERVER_HOSTNAME: !Ref SERVER_HOSTNAME
-        DATABASE_URL: !Ref DATABASE_URL
-        DEFAULT_USER_NAME: !Ref DEFAULT_USER_NAME
-        DEFAULT_USER_EMAIL: !Ref DEFAULT_USER_EMAIL
-        DEFAULT_USER_PASSWORD: !Ref DEFAULT_USER_PASSWORD
+        NODE_ENV: !Ref NodeEnv
+        JWT_SECRET: !Ref JwtSecret
+        SERVER_PORT: !Ref ServerPort
+        SERVER_HOSTNAME: !Ref ServerHostname
+        DATABASE_URL: !Ref DatabaseUrl
+        DEFAULT_USER_NAME: !Ref DefaultUserName
+        DEFAULT_USER_EMAIL: !Ref DefaultUserEmail
+        DEFAULT_USER_PASSWORD: !Ref DefaultUserPassword
 
 Resources:
   TestGbeeApi:

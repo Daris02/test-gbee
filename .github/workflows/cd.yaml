@@ -43,11 +43,11 @@ jobs:
           --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
           --region ${{ secrets.AWS_REGION }} \
           --parameter-overrides \
-            ParameterKey=NODE_ENV,ParameterValue=${{ secrets.NODE_ENV }} \
-            ParameterKey=SERVER_PORT,ParameterValue=${{ secrets.SERVER_PORT }} \
-            ParameterKey=SERVER_HOSTNAME,ParameterValue=${{ secrets.SERVER_HOSTNAME }} \
-            ParameterKey=DATABASE_URL,ParameterValue=${{ secrets.DATABASE_URL }} \
-            ParameterKey=JWT_SECRET,ParameterValue=${{ secrets.JWT_SECRET }} \
-            ParameterKey=DEFAULT_USER_NAME,ParameterValue=${{ secrets.DEFAULT_USER_NAME }} \
-            ParameterKey=DEFAULT_USER_EMAIL,ParameterValue=${{ secrets.DEFAULT_USER_EMAIL }} \
-            ParameterKey=DEFAULT_USER_PASSWORD,ParameterValue=${{ secrets.DEFAULT_USER_PASSWORD }} \
+            ParameterKey=NodeEnv,ParameterValue=${{ secrets.NODE_ENV }} \
+            ParameterKey=ServerPort,ParameterValue=${{ secrets.SERVER_PORT }} \
+            ParameterKey=ServerHostname,ParameterValue=${{ secrets.SERVER_HOSTNAME }} \
+            ParameterKey=DatabaseUrl,ParameterValue=${{ secrets.DATABASE_URL }} \
+            ParameterKey=JwtSecret,ParameterValue=${{ secrets.JWT_SECRET }} \
+            ParameterKey=DefaultUserName,ParameterValue=${{ secrets.DEFAULT_USER_NAME }} \
+            ParameterKey=DefaultUserEmail,ParameterValue=${{ secrets.DEFAULT_USER_EMAIL }} \
+            ParameterKey=DefaultUserPassword,ParameterValue=${{ secrets.DEFAULT_USER_PASSWORD }} \
