@@ -28,7 +28,11 @@ jobs:
       uses: aws-actions/setup-sam@v2
 
     - name: Build the app
-      run: sam build
+      run: | 
+        cd app && \
+        npm install && \
+        cd .. && \
+        sam build
 
     - name: Deploy the app
       run: |
