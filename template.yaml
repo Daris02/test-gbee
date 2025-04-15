@@ -4,7 +4,25 @@ Description: >
   test-gbee
 
   Sample SAM Template for test-gbee
-  
+
+Parameters:
+  NODE_ENV:
+    Type: String
+  SERVER_PORT:
+    Type: String
+  SERVER_HOSTNAME:
+    Type: String
+  DATABASE_URL:
+    Type: String
+  JWT_SECRET:
+    Type: String
+  DEFAULT_USER_NAME:
+    Type: String
+  DEFAULT_USER_EMAIL:
+    Type: String
+  DEFAULT_USER_PASSWORD:
+    Type: String
+
 Globals:
   Function:
     Tracing: Active
