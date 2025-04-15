@@ -22,18 +22,18 @@ Globals:
         DEFAULT_USER_PASSWORD: !Ref DEFAULT_USER_PASSWORD
 
 Resources:
-  testGbeeApi:
+  TestGbeeApi:
     Type: AWS::Serverless::Api
     Properties:
       StageName: prod
       BinaryMediaTypes:
         - "*~1*"
 
-  GnestLayer:
+  TestGbeeLayer:
     Type: AWS::Serverless::LayerVersion
     Properties:
-      LayerName: Gnest-Dependencies
-      Description: Gnest layer
+      LayerName: TestGbee-Dependencies
+      Description: TestGbee layer
       ContentUri: app/node_modules
       CompatibleRuntimes:
         - nodejs20.x
@@ -49,7 +49,7 @@ Resources:
       Architectures:
         - x86_64
       Layers:
-        - !Ref GnestLayer
+        - !Ref TestGbeeLayer
       MemorySize: 1024
       Timeout: 30
       Events:
@@ -59,7 +59,7 @@ Resources:
             Path: /{proxy+}
             Method: ANY
             RestApiId:
-              Ref: testGbeeApi
+              Ref: TestGbeeApi
     Metadata:
       BuildMethod: esbuild
 
@@ -80,4 +80,4 @@ Resources:
 Outputs:
   AppApi:
     Description: "API Gateway endpoint URL for Prod stage for Hello World function"
-    Value: !Sub "https://${testGbeeApi}.execute-api.${AWS::Region}.amazonaws.com/prod/"
+    Value: !Sub "https://${TestGbeeApi}.execute-api.${AWS::Region}.amazonaws.com/prod/"
